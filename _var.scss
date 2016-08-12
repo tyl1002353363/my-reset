@@ -1,0 +1,231 @@
+/*reset样式*/
+html{
+    color: #000;
+    background: #fff;
+    width:100%;
+    height:100%;
+}
+body{body {
+  	font: 14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+  	color: #14191e;
+	-webkit-font-smoothing:antialiased;
+	-webkit-overflow-scrolling:touch;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+/*列表默认样式*/
+ul,
+ol {
+    list-style: none;
+}
+/*链接默认下划线*/
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:active{text-decoration: none;}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*设置默认字体*/
+input{font-family:"Microsoft YaHei";}
+
+/*清除ios下的button默认样式*/
+input[type=button],button{
+	-webkit-appearance:none;
+	outline:none
+}
+
+
+/**/
+/*清除浮动*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1}
+
+/*居中样式*/
+@mixin p_center(){
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+}
+
+/*弹出层蒙版样式*/
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+/*弹出层样式*/
+@mixin rl_modal($width,$height){
+	position: fixed;
+	background: #fff;
+	z-index: 100000;
+	width: 360px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+/*按钮样式*/
+@mixin button($width,$height,$color,$radius: ){
+    width: $width;
+    height: $height;
+    color: $color;
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    line-height: $height;
+    text-align: center;
+}
+
+/*pc端自定义提示框样式*/
+.prompt-box-pc{
+    display: none;
+    padding: 25px 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);    
+    max-width: 400px;
+    min-width: 250px;
+    background-color: #2f3744;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 100; 
+}
+
+/*移动端自定义提示框样式*/
+.prompt-box-mb{
+    display: none;
+    padding: 0.33333rem 0.4rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    line-height: 0.7rem;
+    max-width: 3.33333rem;
+    min-width: 1.06667rem;
+    background-color: #2f3744;
+    font-size: 0.4rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.13333rem; 
+}
